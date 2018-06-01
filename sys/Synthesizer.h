@@ -133,7 +133,7 @@ protected:
 
     //  This value is used to fudge a rotated image.
     enum
-    AcpiPldRotation
+		_ACPI_PLD_ROTATION
                 m_Rotation;
 
     //
@@ -231,7 +231,7 @@ public:
         , m_SynthesisTime(0)
         , m_CommitCount(0)
         , m_CommitTime(0)
-        , m_Rotation(AcpiPldRotation0)
+        , m_Rotation((AcpiPldRotation)AcpiPldRotation0)
     {
         m_Length = Height * m_SynthesisStride;
         KeQueryPerformanceCounter(&m_Frequency).QuadPart;
